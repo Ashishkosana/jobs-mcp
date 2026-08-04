@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobs-mcp"
+version = "0.1.0"
+description = "An MCP server that surfaces live US software-engineering jobs from public ATS boards."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ashish Kosana" }]
+dependencies = ["mcp>=2.0"]
+
+[project.scripts]
+jobs-mcp = "jobs_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
